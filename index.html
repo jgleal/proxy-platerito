@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Validación QR</title>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const codigo = params.get("codigo");
+
+    if (codigo) {
+      window.location.href = "https://script.google.com/macros/s/AKfycb7UxMWCZS3lsdCEyCB8Y2j3rfEPVxvAstiW6Mg-XzmjOrpm6OB0c2fB0mO5QdkSyC4/exec?codigo=" + encodeURIComponent(codigo);
+    }
+  </script>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      margin-top: 5rem;
+    }
+    h2 {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h2>⚠️ Código no válido</h2>
+  <p>Accede desde un QR válido o añade <code>?codigo=...</code> a la URL.</p>
+</body>
+</html>
